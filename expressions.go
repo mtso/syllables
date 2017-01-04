@@ -6,26 +6,25 @@ import (
 
 var (
 	expressionMonosyllabicOne = regexp.MustCompile(
-		"/" +
 		"cia(l|$)|" +
-		"tia|" +
-		"cius|" +
-		"cious|" +
-		"[^aeiou]giu|" +
-		"[aeiouy][^aeiouy]ion|" +
-		"iou|" +
-		"sia$|" +
-		"eous$|" +
-		"[oa]gue$|" +
-		".[^aeiuoycgltdb]{2,}ed$|" +
-		".ely$|" +
-		"^jua|" +
-		"uai|" +
-		"eau|" +
-		"^busi$|" +
-		"(" +
-		"[aeiouy]" +
-		"(" +
+			"tia|" +
+			"cius|" +
+			"cious|" +
+			"[^aeiou]giu|" +
+			"[aeiouy][^aeiouy]ion|" +
+			"iou|" +
+			"sia$|" +
+			"eous$|" +
+			"[oa]gue$|" +
+			".[^aeiuoycgltdb]{2,}ed$|" +
+			".ely$|" +
+			"^jua|" +
+			"uai|" +
+			"eau|" +
+			"^busi$|" +
+			"(" +
+			"[aeiouy]" +
+			"(" +
 			"b|" +
 			"c|" +
 			"ch|" +
@@ -62,12 +61,12 @@ var (
 			"v|" +
 			"y|" +
 			"z" +
-		")" +
-		"ed$" +
-		")|" +
-		"(" +
-		"[aeiouy]" +
-		"(" +
+			")" +
+			"ed$" +
+			")|" +
+			"(" +
+			"[aeiouy]" +
+			"(" +
 			"b|" +
 			"ch|" +
 			"d|" +
@@ -100,17 +99,14 @@ var (
 			"th|" +
 			"v|" +
 			"y" +
-		")" +
-		"es$" +
-		")" +
-		"/" +
-		"g",
+			")" +
+			"es$" +
+			")",
 	)
 
 	expressionMonosyllabicTwo = regexp.MustCompile(
-		"/" +
 		"[aeiouy]" +
-		"(" +
+			"(" +
 			"b|" +
 			"c|" +
 			"ch|" +
@@ -148,26 +144,23 @@ var (
 			"v|" +
 			"y|" +
 			"z" +
-		")" +
-		"e$" +
-		"/" +
-		"g",
+			")" +
+			"e$",
 	)
 
 	expressionDoubleSyllabicOne = regexp.MustCompile(
-		"/" +
 		"(" +
 			"(" +
-				"[^aeiouy]" +
+			"[^aeiouy]" +
 			// Remove unsupported backreference
 			// Replace with {1,2} instead (one or two repeated consanants)
 			// Original with backreference: ")\\2l|" +
-			"){1,2}l|" + 
+			"){1,2}l|" +
 			"[^aeiouy]ie" +
 			"(" +
-				"r|" +
-				"st|" +
-				"t" +
+			"r|" +
+			"st|" +
+			"t" +
 			")|" +
 			"[aeiouym]bl|" +
 			"eo|" +
@@ -182,50 +175,41 @@ var (
 			"ua|" +
 			"eings?|" +
 			"[aeiouy]sh?e[rsd]" +
-		")$" +
-		"/" +
-		"g",
+			")$",
 	)
-	
+
 	expressionDoubleSyllabicTwo = regexp.MustCompile(
-		"/" +
 		"[^gq]ua[^auieo]|" +
-		"[aeiou]{3}|" +
-		"^(" +
+			"[aeiou]{3}|" +
+			"^(" +
 			"ia|" +
 			"mc|" +
 			"coa[dglx]." +
-		")" +
-		"/" +
-		"g",
+			")",
 	)
-	
+
 	expressionDoubleSyllabicThree = regexp.MustCompile(
-		"/" +
 		"[^aeiou]y[ae]|" +
-		"[^l]lien|" +
-		"riet|" +
-		"dien|" +
-		"iu|" +
-		"io|" +
-		"ii|" +
-		"uen|" +
-		"real|" +
-		"iell|" +
-		"eo[^aeiou]|" +
-		"[aeiou]y[aeiou]" +
-		"/" +
-		"g",
+			"[^l]lien|" +
+			"riet|" +
+			"dien|" +
+			"iu|" +
+			"io|" +
+			"ii|" +
+			"uen|" +
+			"real|" +
+			"iell|" +
+			"eo[^aeiou]|" +
+			"[aeiou]y[aeiou]",
 	)
-	
+
 	expressionDoubleSyllabicFour = regexp.MustCompile(
-		"/[^s]ia/",
+		"[^s]ia",
 	)
-	
+
 	expressionSingle = regexp.MustCompile(
-		"/" +
 		"^" +
-		"(" +
+			"(" +
 			"un|" +
 			"fore|" +
 			"ware|" +
@@ -237,34 +221,31 @@ var (
 			"pro|" +
 			"dis|" +
 			"side" +
-		")" +
-		"|" +
-		"(" +
-	    "ly|" +
-	    "less|" +
-	    "some|" +
-	    "ful|" +
-	    "ers?|" +
-	    "ness|" +
-	    "cians?|" +
-	    "ments?|" +
-	    "ettes?|" +
-	    "villes?|" +
-	    "ships?|" +
-	    "sides?|" +
-	    "ports?|" +
-	    "shires?|" +
-	    "tion(ed)?" +
-		")" +
-		"$" +
-		"/" +
-		"g",
+			")" +
+			"|" +
+			"(" +
+			"ly|" +
+			"less|" +
+			"some|" +
+			"ful|" +
+			"ers?|" +
+			"ness|" +
+			"cians?|" +
+			"ments?|" +
+			"ettes?|" +
+			"villes?|" +
+			"ships?|" +
+			"sides?|" +
+			"ports?|" +
+			"shires?|" +
+			"tion(ed)?" +
+			")" +
+			"$",
 	)
-	
+
 	expressionDouble = regexp.MustCompile(
-		"/" +
 		"^" +
-		"(" +
+			"(" +
 			"above|" +
 			"anti|" +
 			"ante|" +
@@ -287,25 +268,22 @@ var (
 			"pico|" +
 			"nano|" +
 			"macro" +
-		")" +
-		"|" +
-		"(" +
+			")" +
+			"|" +
+			"(" +
 			"fully|" +
 			"berry|" +
 			"woman|" +
 			"women" +
-		")" +
-		"$" +
-		"/" +
-		"g",
+			")" +
+			"$",
 	)
-	
+
 	expressionTriple = regexp.MustCompile(
-		"/(ology|ologist|onomy|onomist)$/g",
+		"(ology|ologist|onomy|onomist)$",
 	)
-	
+
 	expressionNonalphabetic = regexp.MustCompile(
-		"/[^a-z]/g",
+		"[^a-z]",
 	)
-	
 )

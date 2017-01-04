@@ -1,4 +1,4 @@
-package syllable
+package syllables
 
 import (
 	"regexp"

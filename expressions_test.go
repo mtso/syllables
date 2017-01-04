@@ -21,7 +21,7 @@ func Test_Expressions (t *testing.T) {
 		},
 		{
 			expressionDoubleSyllabicOne,
-			"/(([^aeiouy])\\2l|[^aeiouy]ie(r|st|t)|[aeiouym]bl|eo|ism|asm|thm|dnt|uity|dea|gean|oa|ua|eings?|[aeiouy]sh?e[rsd])$/g",
+			"/(([^aeiouy])l|[^aeiouy]ie(r|st|t)|[aeiouym]bl|eo|ism|asm|thm|dnt|uity|dea|gean|oa|ua|eings?|[aeiouy]sh?e[rsd])$/g",
 		},
 		{
 			expressionDoubleSyllabicTwo,

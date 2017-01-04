@@ -159,7 +159,9 @@ var (
 		"(" +
 			"(" +
 				"[^aeiouy]" +
-			")\\2l|" +
+			// Remove unsupported backreference
+			// Original with backreference: ")\\2l|" +
+			")l|" + 
 			"[^aeiouy]ie" +
 			"(" +
 				"r|" +

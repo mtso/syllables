@@ -1,0 +1,10 @@
+image: golang:1.7
+
+test:
+  script:
+    - go env
+    - mkdir -p $GOPATH/src/github.com/mtso/syllables
+    - cp -r * $GOPATH/src/github.com/mtso/syllables
+    - cd $GOPATH/src/github.com/mtso/syllables
+    - go get .
+    - go test -v

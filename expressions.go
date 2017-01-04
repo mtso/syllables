@@ -160,8 +160,9 @@ var (
 			"(" +
 				"[^aeiouy]" +
 			// Remove unsupported backreference
+			// Replace with {1,2} instead (one or two repeated consanants)
 			// Original with backreference: ")\\2l|" +
-			")l|" + 
+			"){1,2}l|" + 
 			"[^aeiouy]ie" +
 			"(" +
 				"r|" +

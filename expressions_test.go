@@ -37,15 +37,15 @@ func Test_Expressions(t *testing.T) {
 		},
 		{
 			expressionSingle,
-			"^(un|fore|ware|none?|out|post|sub|pre|pro|dis|side)|(ly|less|some|ful|ers?|ness|cians?|ments?|ettes?|villes?|ships?|sides?|ports?|shires?|tion(ed)?)$",
+			"^(un|fore|ware|none?|out|post|sub|pre|pro|dis|side)|(ly|less|some|ful|ers?|ness|cians?|ments?|ettes?|villes?|ships?|sides?|ports?|shires?|tion(ed)?)",
 		},
 		{
 			expressionDouble,
-			"^(above|anti|ante|counter|hyper|afore|agri|infra|intra|inter|over|semi|ultra|under|extra|dia|micro|mega|kilo|pico|nano|macro)|(fully|berry|woman|women)$",
+			"^(above|anti|ante|counter|hyper|afore|agri|infra|intra|inter|over|semi|ultra|under|extra|dia|micro|mega|kilo|pico|nano|macro)|(fully|berry|woman|women)",
 		},
 		{
 			expressionTriple,
-			"(ology|ologist|onomy|onomist)$",
+			"(ology|ologist|onomy|onomist)",
 		},
 		{
 			expressionNonalphabetic,

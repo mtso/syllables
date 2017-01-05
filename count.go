@@ -2,7 +2,7 @@ package syllables
 
 import (
 	"strings"
-	// "log"
+	"log"
 )
 
 type counter struct {
@@ -17,6 +17,9 @@ func In(text string) int {
 	// and removing all non-alphabetic runes
 	text = strings.ToLower(text)
 	text = expressionNonalphabetic.ReplaceAllString(text, "")
+
+	log.Println(text)
+	log.Println("")
 
 	// Return early when possible
 	if len(text) < 1 {
@@ -39,6 +42,9 @@ func In(text string) int {
 	text = expressionTriple.ReplaceAllStringFunc(text, c.countAndRemove(3))
 	text = expressionDouble.ReplaceAllStringFunc(text, c.countAndRemove(2))
 	text = expressionSingle.ReplaceAllStringFunc(text, c.countAndRemove(1))
+
+	log.Println(text)
+	log.Println("")
 
 	// Count multiple consanants
 	c.parts = consanants.Split(text, -1)
@@ -66,6 +72,8 @@ func In(text string) int {
 	expressionDoubleSyllabicFour.ReplaceAllStringFunc(text, addOne)
 
 	// log.Println(text)
+	log.Println(text)
+	log.Println("")
 
 	if c.count < 1 {
 		return 1

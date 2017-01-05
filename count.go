@@ -1,3 +1,6 @@
+// Package syllables provides a Go implementation of 
+// the syllable counter from `github.com/wooorm/syllable`
+// Currently supports strings as input only
 package syllables
 
 import (
@@ -10,6 +13,7 @@ type counter struct {
 	parts                []string
 }
 
+// Returns the integer count of syllables in the input string.
 func In(text string) int {
 
 	// Prepare input text by converting to lowercase

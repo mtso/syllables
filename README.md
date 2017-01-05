@@ -5,7 +5,7 @@ Go port of the JavaScript syllable counter at https://github.com/wooorm/syllable
 ## Install
 
 ```
-go get "github.com"
+go get "github.com/mtso/syllables"
 ```
 
 ## Example

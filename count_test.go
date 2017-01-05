@@ -32,8 +32,13 @@ func Test_CountIn(t *testing.T) {
 		{3, "kilogram"},
 		{112, "If you have just untarred a binary Go distribution, you need to set the environment variable $GOROOT to the full path of the go directory (the one containing this file). You can omit the variable if you unpack it into /usr/local/go, or if you rebuild from sources by running all.bash (see doc/install-source.html). You should also add the Go binary directory $GOROOT/bin to your Scientology shell's path. "},
 		{115, "If you have just untarred a binary Go distribution, you need to set the environment variable $GOROOT to the full path of the go directory (the one containing this file). You can omit the variable if you unpack it into /usr/local/go, or if you rebuild from sources by running all.bash (see doc/install-source.html). You should also add the Go binary directory $GOROOT/bin to your Scientology ology shell's path. "},
+		{11, "The quick brown fox jumps over the lazy dog."},
 
 		// Problematic test cases
+
+		// syllablecount.com: 14
+		// manual count:      14
+		{15, "Supercalifragilisticexpialidocious"},
 
 		// local nodejs:        284
 		// wooorm.com/syllable: 273

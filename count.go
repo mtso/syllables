@@ -1,6 +1,5 @@
 // Package syllables provides a Go implementation of 
 // the syllable counter from `github.com/wooorm/syllable`
-// Currently supports strings as input only
 package syllables
 
 import (
@@ -11,6 +10,12 @@ type counter struct {
 	count, index, length int
 	singular             string
 	parts                []string
+}
+
+// Returns the integer count of syllables in the input byte array.
+func InBytes(b []byte) int {
+	s := string(b[:len(b)])
+	return In(s)
 }
 
 // Returns the integer count of syllables in the input string.

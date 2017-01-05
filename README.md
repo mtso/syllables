@@ -12,7 +12,7 @@ go get "github.com"
 
 Example usage of `syllables.In(string) int`:
 
-```
+```go
 package main
 
 import (

@@ -24,6 +24,7 @@ var cornercases = map[string]int{
 	"circe":       2,
 	"coyote":      3,
 	"epitome":     4,
+	"facsimile":   4,
 	"forever":     3,
 	"gethsemane":  4,
 	"guacamole":   4,

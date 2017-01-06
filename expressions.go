@@ -154,7 +154,8 @@ var (
 				"[^aeiouy]" +
 			// Remove unsupported backreference
 			// Replace with {1,2} instead (one or two repeated consanants)
-			// Original with backreference: ")\\2l|" +
+			// Will probably need to figure out a better way to do this
+			// Original with backreference: `")\\2l|" +`
 			"){1,2}l|" +
 			"[^aeiouy]ie" +
 			"(" +
@@ -239,8 +240,7 @@ var (
 			"ports?|" +
 			"shires?|" +
 			"tion(ed)?" +
-		")",// +
-		//"$",
+		")",
 	)
 
 	expressionDouble = regexp.MustCompile(
@@ -275,12 +275,11 @@ var (
 			"berry|" +
 			"woman|" +
 			"women" +
-		")",// +
-		// "$",
+		")",
 	)
 
 	expressionTriple = regexp.MustCompile(
-		"(ology|ologist|onomy|onomist)", //$",
+		"(ology|ologist|onomy|onomist)",
 	)
 
 	expressionNonalphabetic = regexp.MustCompile(

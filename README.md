@@ -1,5 +1,7 @@
 # syllables [![Build Status](https://travis-ci.org/mtso/syllables.svg?branch=master)](https://travis-ci.org/mtso/syllables) [![codecov](https://codecov.io/gh/mtso/syllables/branch/master/graph/badge.svg)](https://codecov.io/gh/mtso/syllables) [![GoDoc](https://godoc.org/github.com/mtso/syllables?status.svg)](https://godoc.org/github.com/mtso/syllables)
 
+> **This repo is not actively maintained and is archived to be a reference. Please look into a fork instead**
+
 Go port of the JavaScript syllable counter at https://github.com/wooorm/syllable
 
 ## Install
